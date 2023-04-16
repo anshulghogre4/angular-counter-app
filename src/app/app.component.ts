@@ -6,5 +6,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'counter-app';
-}
+  title : string = 'Counter App';
+
+   count :number = 0;
+
+
+   handleIncrease = () => {
+
+    // provided some conditions for increase
+        if(this.count < 10){
+          this.count = this.count + 1;
+        }
+   }
+
+   // provided some conditions for decrease
+   handleDecrease = () =>{
+    if(this.count > 0)
+        this.count = this.count - 1;
+        }
+
+   handleReset = () =>{
+        this.count =  0;
+   }
+
+
+   }
+
+
